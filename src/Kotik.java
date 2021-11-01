@@ -14,8 +14,8 @@ public class Kotik {
     void liveAnotherDay(){
         Kotik kotik1 = new Kotik(9999, 6327, "Рыжий", "Мау");
         Random r = new Random();
-        int num = r.nextInt(5);
         for (int i = 24; i !=0; i--) {
+            int num = r.nextInt(5);
             switch (num) {
                 case 0:
                     kotik1.sleep();
