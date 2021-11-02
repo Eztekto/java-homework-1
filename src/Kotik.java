@@ -5,16 +5,18 @@ public class Kotik {
     int weight;
     String name;
     String meow;
+    static int full;
     public Kotik(int prettiness,int weight, String name, String meow){
         this.prettiness = prettiness;
         this.weight = weight;
         this.name = name;
         this.meow = meow;
+        this.full = full;
     }
     static void liveAnotherDay(){
         Kotik kotik1 = new Kotik(9999, 6327, "Рыжий", "Мау");
         Random r = new Random();
-        for (int i = 24; i !=0; i--) {
+        for (full = 24; full !=0; full--) {
             int num = r.nextInt(5);
             switch (num) {
                     case 0:
@@ -34,14 +36,18 @@ public class Kotik {
                         break;
                 }
 
+                kotik1.eat();
+
+
                 }
-        kotik1.eat();
+
 
 
     }
-    void eat(){
+    int eat(){
         System.out.println(name + " проголодался");
         System.out.println(name + " кушает");
+        return full++;
     }
     void sleep(){
         System.out.println(name + " спит");
@@ -59,4 +65,5 @@ public class Kotik {
     void sayMeow(){
         System.out.println(name + " говорит: " + meow);
     }
+
 }
