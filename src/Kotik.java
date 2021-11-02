@@ -11,12 +11,12 @@ public class Kotik {
         this.weight = weight;
         this.name = name;
         this.meow = meow;
-        this.full = full;
+        this.full = 24;
     }
     static void liveAnotherDay(){
         Kotik kotik1 = new Kotik(9999, 6327, "Рыжий", "Мау");
         Random r = new Random();
-        for (full = 24; full !=0; full--) {
+        while (full !=0) {
             int num = r.nextInt(5);
             switch (num) {
                     case 0:
@@ -49,21 +49,26 @@ public class Kotik {
         System.out.println(name + " кушает");
         return full++;
     }
-    void sleep(){
+    int sleep(){
         System.out.println(name + " спит");
+        return full--;
     }
-    void play(){
+    int play(){
         System.out.println(name + " играет с клубком");
+        return full--;
     }
-    void chaseMouse(){
+    int chaseMouse(){
         System.out.println(name + " гоняет мышь");
+        return full--;
     }
-    void fight(){
+    int fight(){
         System.out.println(name + " дерётся");
+        return full--;
     }
 
-    void sayMeow(){
+    int sayMeow(){
         System.out.println(name + " говорит: " + meow);
+        return full--;
     }
 
 }
