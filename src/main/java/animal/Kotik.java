@@ -1,4 +1,5 @@
-package main.java.animals;
+package main.java.animal;
+
 import java.util.Scanner;
 import java.util.Random;
 

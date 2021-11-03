@@ -1,4 +1,4 @@
-import main.java.animals.Kotik;
+import main.java.animal.Kotik;
 
 class Main {
     public static void main(String args[]) {
