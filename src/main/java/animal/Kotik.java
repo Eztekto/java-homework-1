@@ -4,13 +4,34 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Kotik {
-   private int prettiness;
+    private int prettiness;
     private int weight;
     private String name;
     private String meow;
+
+    public int getPrettiness() {
+        return prettiness;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getMeow() {
+        return meow;
+    }
+
+    public String getLoveFood() {
+        return loveFood;
+    }
+
+    private String loveFood;
     private static int full;
     private static int count;
-    private String loveFood;
     public Kotik(int prettiness,int weight, String name, String meow, String loveFood){
         this.prettiness = prettiness;
         this.weight = weight;
@@ -26,8 +47,15 @@ public class Kotik {
         while (true) {
             if (full <= 0) {
                 System.out.println(name + " прожил " + count + " мгновений");
-                System.out.println(name + " проголодался, что ты ему дашь?");
-                eat();
+                if (count < 30){
+                    System.out.println(name + " проголодался, что ты ему дашь?");
+                    eat();
+                } else {
+                    full += 23;
+                    count *= 0;
+                   return;
+                }
+
 
             } else {
                 int num = r.nextInt(5);
@@ -75,6 +103,7 @@ public class Kotik {
         System.out.println("Как вкусно!");
         full += food;
         count++;
+
 
     }
 
