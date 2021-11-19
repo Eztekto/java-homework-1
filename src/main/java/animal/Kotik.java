@@ -107,32 +107,32 @@ public class Kotik {
 
     }
 
-    boolean sleep(){
+   private boolean sleep(){
         System.out.println(name + " спит");
         full --;
         count++;
         return true;
     }
-    boolean play(){
+    private boolean play(){
         System.out.println(name + " играет с клубком");
         full --;
         count++;
         return true;
     }
-    boolean chaseMouse(){
+    private boolean chaseMouse(){
         System.out.println(name + " гоняет мышь");
         full --;
         count++;
         return true;
     }
-    boolean fight(){
+    private boolean fight(){
         System.out.println(name + " дерётся");
         full --;
         count++;
         return true;
     }
 
-    boolean sayMeow(){
+    private boolean sayMeow(){
         System.out.println(name + " говорит: " + meow);
         full --;
         count++;
