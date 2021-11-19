@@ -12,7 +12,7 @@ public class Application {
         System.out.println(kotik1.getName() + " весит " + kotik1.getWeight());
         System.out.println(kotik2.getName() + " красив на: " + kotik2.getPrettiness());
         System.out.println(kotik2.getName() + " весит " + kotik2.getWeight());
-        if (kotik1.getMeow() == kotik2.getMeow()){
+        if (kotik1.getMeow().equals(kotik2.getMeow())){
             System.out.println("Котитики разговаривают одинаково");
         }
         else{
